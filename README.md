@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ pekoUiHub - Interactive Motion & UI Animation Library
 
-## Getting Started
+> Your personal vault for high-end web animations, kinetic typography, 3D spatial stages, and interactive UX components.
 
-First, run the development server:
+Built on the latest modern web stack (2026):
+- **Next.js**: `16.3.8` (App Router + Turbopack)
+- **React**: `19.2.8`
+- **Tailwind CSS**: `v4.3.3`
+- **GSAP**: `3.15.0`
+- **Framer Motion / Motion**: `14.0.0`
+- **Lenis**: `1.3.26` (Smooth scrolling engine)
+- **Lucide Icons**: `1.52.0`
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# 1. Open the project
+cd pekoUiHub
+
+# 2. Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# 3. Open in browser
+# Visit http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📦 What's Inside pekoUiHub
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Component Name | Category | Tech Stack | Description |
+|---|---|---|---|
+| **Kinetic Zipper Reveal** | Text Animation | GSAP, Clip-Path, Lucide | Interactive horizontal pull-tab slider unmasking typography with real-time `clipPath` math. |
+| **Physical Kick & 3D Tilt** | Text Animation | Motion, GSAP | Physics collision where central tile knocks words out, followed by a 3D `rotateX` tilt reveal. |
+| **Masked Slide Pop-up** | Text Animation | Motion, Cubic-Bezier | Overflow-hidden line reveal with 3 presets: Apple Editorial, Spring Pop-up, and Kinetic Skew. |
+| **3D Cylinder Rotary Drum** | 3D & Spatial | CSS 3D, GSAP | Cylindrical carousel adhering to the Zero-Degree Focus Rule (center at 0deg, sides at ±32deg). |
+| **3D Book Spread & Close** | 3D & Spatial | CSS 3D, GSAP, Lenis | Real 3D spatial book flips with Z-depth stacking, ribbon bookmarks, and auto-closing back cover. |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ How to Save New Animations Here
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Create the component:**
+   Add your new animation component inside `src/components/animations/YourAnimation.tsx`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Register it in the vault catalog:**
+   Open `src/data/animations.ts` and append a new entry to the `ANIMATIONS` array with its title, tags, description, and code snippet.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Map it in `src/app/page.tsx`:**
+   Add it to the `renderComponent` switch case so it displays automatically with live preview, code inspection, and search support!
